@@ -1,0 +1,26 @@
+# Unreal generated folders
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# IDE
+.vs/
+.idea/
+*.sln
+*.VC.db
+*.opensdf
+*.suo
+*.user
+*.DotSettings.user
+
+# Build artifacts
+*.dll
+*.pdb
+*.obj
+*.exe
+*.lib
+*.exp
+
+# Logs
+*.log
