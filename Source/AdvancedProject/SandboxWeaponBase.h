@@ -1,7 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "WeaponBase.h"
+#include "Task/WeaponBase.h"
 #include "SandboxWeaponBase.generated.h"
 
 UCLASS()
