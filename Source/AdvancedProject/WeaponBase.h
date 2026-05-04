@@ -53,10 +53,39 @@ protected:
 	UPROPERTY(BlueprintReadWrite)
 	bool CanFire;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weapon|Recoil")
+	float RecoilPitch;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weapon|Recoil")
+	float RecoilYawMin;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weapon|Recoil")
+	float RecoilYawMax;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weapon|Recoil")
+	bool bUseRecoil;
+
 	//연사속도 제어를 위한 핸들
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FTimerHandle TimerFireDelay;
 
 	UFUNCTION()
 	void HandleFireDelay();
+
+	UFUNCTION(BlueprintCallable)
+	virtual void ApplyRecoil();
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weapon|Test")
+	bool bAutoFireForTest = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weapon|Test")
+	float AutoFireInterval = 1.0f;
+
+	FTimerHandle AutoFireTimerHandle;
+
+	void StartAutoFireForTest();
+
+	UFUNCTION()
+	void AutoFireOnce();
 };

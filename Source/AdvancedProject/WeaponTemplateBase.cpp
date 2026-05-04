@@ -1,19 +1,24 @@
 #include "WeaponTemplateBase.h"
 
 void AWeaponTemplateBase::Fire()
-
 {
-	if (!CanFire) return;
+	if (!CanFire)
+	{
+		return;
+	}
 
 	if (CheckAmmo())
 	{
-		//순서를 여기서 저희 맘대로!!!!!!
 		PlayEffects();
 		ProcessFiring();
+		ApplyRecoil();
 		UpdateAmmo();
 
 		Super::Fire();
-		return;
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("%s has no ammo."), *GetName());
 	}
 }
 
@@ -25,6 +30,10 @@ void AWeaponTemplateBase::Reload_Implementation()
 bool AWeaponTemplateBase::CheckAmmo_Implementation()
 {
 	return AmmoPerFire <= CurrentAmmo;
+}
+
+void AWeaponTemplateBase::ProcessFiring_Implementation()
+{
 }
 
 void AWeaponTemplateBase::UpdateAmmo_Implementation()
