@@ -3,10 +3,12 @@ Binaries/
 Intermediate/
 Saved/
 DerivedDataCache/
+Content/
 
 # IDE
 .vs/
 .idea/
+.vsconfig
 *.sln
 *.VC.db
 *.opensdf
