@@ -4,7 +4,6 @@
 UInventoryComponent::UInventoryComponent()
 {
 	PrimaryComponentTick.bCanEverTick = false;
-
 }
 
 bool UInventoryComponent::AddItem(FName ItemID, int32 Count)
@@ -13,7 +12,7 @@ bool UInventoryComponent::AddItem(FName ItemID, int32 Count)
 	{
 		return false;
 	}
-	
+
 	FAdvancedProjectInventoryItemInfo* ItemInfo = ItemInfoMap.Find(ItemID);
 	if (ItemInfo == nullptr)
 	{
@@ -28,11 +27,11 @@ bool UInventoryComponent::AddItem(FName ItemID, int32 Count)
 			return true;
 		}
 	}
-	
+
 	FInventoryItem NewItem;
 	NewItem.ItemID = ItemID;
 	NewItem.Count = Count;
-	
+
 	InventoryItems.Add(NewItem);
 	return true;
 }
@@ -76,7 +75,7 @@ bool UInventoryComponent::HasItem(FName ItemID) const
 			return true;
 		}
 	}
-	
+
 	return false;
 }
 
@@ -92,4 +91,3 @@ void UInventoryComponent::AddTitle(FName TitleID)
 		OwnedTitles.Add(TitleID);
 	}
 }
-

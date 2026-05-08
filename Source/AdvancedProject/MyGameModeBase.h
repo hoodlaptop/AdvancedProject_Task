@@ -9,7 +9,7 @@ UCLASS()
 class ADVANCEDPROJECT_API AMyGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
 public:
 	UFUNCTION()
 	virtual void BeginPlay() override;

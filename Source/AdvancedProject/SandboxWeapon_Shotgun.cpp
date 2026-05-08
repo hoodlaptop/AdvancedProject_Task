@@ -65,7 +65,8 @@ void ASandboxWeapon_Shotgun::LineTraceShotgun(FVector Direction)
 
 		if (bHit && Hit.GetActor())
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Shotgun hit: %s / Class: %s"), *Hit.GetActor()->GetName(), *Hit.GetActor()->GetClass()->GetName());
+			UE_LOG(LogTemp, Warning, TEXT("Shotgun hit: %s / Class: %s"), *Hit.GetActor()->GetName(),
+			       *Hit.GetActor()->GetClass()->GetName());
 
 			UGameplayStatics::ApplyPointDamage(
 				Hit.GetActor(),

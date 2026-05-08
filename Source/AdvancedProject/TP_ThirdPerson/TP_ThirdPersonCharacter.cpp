@@ -105,16 +105,16 @@ float ATP_ThirdPersonCharacter::TakeDamage(float DamageAmount, struct FDamageEve
 	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 
 	const UFireDamageType* FireDamage = DamageEvent.DamageTypeClass->GetDefaultObject<UFireDamageType>();
-	
+
 	if (FireDamage)
 	{
 		// 화상
-		
+
 		ActualDamage *= (1.0f + FireDamage->ArmorPenetration);
-		
+
 		UE_LOG(LogTemp, Warning, TEXT("ByWorld Damage Received"));
 	}
-	
+
 	// HP -= ActualDamage;
 
 	/*if (EventInstigator) // 일반적인 공격

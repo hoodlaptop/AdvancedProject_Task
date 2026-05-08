@@ -2,4 +2,3 @@
 
 
 #include "TemplateWeapon_Pistol.h"
-

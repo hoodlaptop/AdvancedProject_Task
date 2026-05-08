@@ -8,21 +8,21 @@ UCLASS()
 class ADVANCEDPROJECT_API AMyGCObserver : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	AMyGCObserver();
 
 protected:
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY()
 	class UMyTestObject* SafeOject;
-	
+
 	TWeakObjectPtr<class UMyTestObject> DangerObject;
-	
+
 	/*UFUNCTION()
 	void TryToUseObject();
 	

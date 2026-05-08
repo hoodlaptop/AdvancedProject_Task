@@ -11,9 +11,10 @@ class ADVANCEDPROJECT_API AEnemyTraceCharacter : public ACharacter
 
 public:
 	AEnemyTraceCharacter();
-	
+
 	virtual void Tick(float DeltaTime) override;
 	virtual void BeginPlay() override;
+
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Trace")
 	float TraceRange;
@@ -21,12 +22,11 @@ protected:
 	float TraceInterval;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Trace")
 	bool bDrawDebug;
-	
+
 	float TraceElapsedTime;
 	bool bTracePending;
-	
-	void StartAsyncTrace();
-	
-	void OnAsyncTraceCompleted(const FTraceHandle& Handle, FTraceDatum& Data);
 
+	void StartAsyncTrace();
+
+	void OnAsyncTraceCompleted(const FTraceHandle& Handle, FTraceDatum& Data);
 };

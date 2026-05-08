@@ -3,4 +3,4 @@
 #include "AdvancedProject.h"
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, AdvancedProject, "AdvancedProject" );
+IMPLEMENT_PRIMARY_GAME_MODULE(FDefaultGameModuleImpl, AdvancedProject, "AdvancedProject");

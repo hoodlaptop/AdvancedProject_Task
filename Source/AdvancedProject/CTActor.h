@@ -8,17 +8,17 @@ UCLASS()
 class ADVANCEDPROJECT_API ACTActor : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	ACTActor();
 
 protected:
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	virtual void Tick(float DeltaTime) override;
 
 	void StartAsyncTrace();
-	
+
 	void OnAsyncTraceCompleted(const FTraceHandle& Handle, FTraceDatum& Data);
 };

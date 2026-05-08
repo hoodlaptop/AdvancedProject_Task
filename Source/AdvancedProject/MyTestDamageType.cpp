@@ -6,8 +6,7 @@
 UMyTestDamageType::UMyTestDamageType()
 {
 	DamageImpulse = 5000.f;
-	
+
 	bScaleMomentumByMass = true;
 	bCausedByWorld = true;
-	
 }

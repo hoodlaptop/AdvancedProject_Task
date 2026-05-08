@@ -22,12 +22,12 @@ public:
 	TMap<FName, FAdvancedProjectInventoryItemInfo> ItemInfoMap;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Title")
 	TSet<FName> OwnedTitles;
-	
+
 	bool AddItem(FName ItemID, int32 Count);
 	bool RemoveItem(FName ItemID, int32 Count);
-	
+
 	bool HasItem(FName ItemID) const;
 	bool HasTitle(FName ItemID) const;
-	
+
 	void AddTitle(FName TitleID);
 };

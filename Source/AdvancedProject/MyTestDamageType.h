@@ -8,9 +8,7 @@ UCLASS()
 class ADVANCEDPROJECT_API UMyTestDamageType : public UDamageType
 {
 	GENERATED_BODY()
-	
+
 public:
 	UMyTestDamageType();
-	
-	
 };

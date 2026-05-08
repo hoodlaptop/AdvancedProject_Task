@@ -13,5 +13,4 @@ UCLASS()
 class ADVANCEDPROJECT_API ATemplateWeapon_Pistol : public AWeaponTemplateBase
 {
 	GENERATED_BODY()
-	
 };

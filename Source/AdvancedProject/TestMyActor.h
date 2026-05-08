@@ -8,17 +8,16 @@ UCLASS()
 class ADVANCEDPROJECT_API ATestMyActor : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	ATestMyActor();
 
 protected:
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY()
 	int32 Health;
-	
 };

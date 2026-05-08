@@ -10,7 +10,7 @@ AEnemyTraceCharacter::AEnemyTraceCharacter()
 	TraceRange = 2000.0f;
 	TraceInterval = 0.25f;
 	bDrawDebug = true;
-	
+
 	TraceElapsedTime = 0.0f;
 	bTracePending = false;
 
@@ -116,5 +116,3 @@ void AEnemyTraceCharacter::OnAsyncTraceCompleted(const FTraceHandle& Handle, FTr
 		}
 	}
 }
-
-
